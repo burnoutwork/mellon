@@ -1,0 +1,13 @@
+# Common
+.idea
+
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+package-lock.json
+
+# Contract
+contract/Cargo.lock
+contract/neardev
+contract/target

@@ -1,0 +1,5 @@
+[build]
+rustflags = ["-C", "link-args=-s"]
+
+[alias]
+build-wasm = ["build", "--target", "wasm32-unknown-unknown", "--release"]

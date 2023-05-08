@@ -1,0 +1,27 @@
+{
+  "name": "melon",
+  "version": "1.0.0",
+  "description": "Social network",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "cd contract && ./deploy.sh",
+    "build:contract": "cd contract && cargo build-wasm",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burnoutwork/mellon.git"
+  },
+  "keywords": [
+    "web3"
+  ],
+  "author": "Tverdoy Dmitry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burnoutwork/mellon/issues"
+  },
+  "homepage": "https://github.com/burnoutwork/mellon#readme",
+  "devDependencies": {
+    "near-cli": "^3.3.0"
+  }
+}
