@@ -1,0 +1,34 @@
+@import "var.css";
+@import "common.css";
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+body, html {
+    min-height: 100%;
+}
+
+html {
+    font-family: -apple-system,BlinkMacSystemFont,Apple Color Emoji,SF Pro,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 106.25%;
+    quotes: "“" "”";
+    box-sizing: border-box;
+    display: block;
+}
+
+body {
+    background-color: var(--pageBG);
+    cursor: default;
+    overflow: hidden;
+
+    color: var(--systemPrimary);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.23077;
+}
+
+
+

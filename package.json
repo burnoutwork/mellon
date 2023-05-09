@@ -4,6 +4,7 @@
   "description": "Social network",
   "main": "index.js",
   "scripts": {
+    "start:frontend": "cd frontend && npm start",
     "deploy": "cd contract && ./deploy.sh",
     "build:contract": "cd contract && cargo build-wasm",
     "test": "echo \"Error: no test specified\" && exit 1"
