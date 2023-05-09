@@ -8,6 +8,10 @@ a {
     color: #fff;
 }
 
+a:hover {
+    color: #fff;
+}
+
 hr {
     flex-shrink: 0;
     border-top-width: 0;

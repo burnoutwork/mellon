@@ -5,5 +5,6 @@
 
 :root {
     --pageBG: #fff;
+    --roundedMD: .5rem;
     --roundedXL: .75rem
 }

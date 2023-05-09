@@ -30,4 +30,7 @@ body {
     line-height: 1.23077;
 }
 
-
+.icon > svg {
+    width: 1.3rem;
+    height: 1.3rem;
+}
