@@ -1,0 +1,31 @@
+.Header {
+    position: sticky;
+    z-index: 40;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--roundedXL);
+    background-color: #fff;
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.Sidebar {
+    margin: 16px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 1.25rem 1.6875rem 0;
+    width: 250px;
+    background-image: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
+    overflow-y: auto;
+    height: calc(100vh - 2rem);
+    border-radius: var(--roundedXL);
+}
+
+.sidebar--title {
+    padding: 24px 32px 8px 32px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.23;
+    text-align: center;
+}
