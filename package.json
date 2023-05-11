@@ -7,7 +7,7 @@
     "start:frontend": "cd frontend && npm start",
     "deploy": "cd contract && ./deploy.sh",
     "build:contract": "cd contract && cargo build-wasm",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd contract && cargo test"
   },
   "repository": {
     "type": "git",
