@@ -5,5 +5,5 @@
 */
 
 job("Hello World!") {
-    container(displayName = "Hello near...", image = "hello-world")
+    container(displayName = "Hello near", image = "hello-world")
 }
