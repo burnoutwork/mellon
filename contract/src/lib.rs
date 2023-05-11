@@ -43,7 +43,7 @@ impl App {
 
 #[cfg(test)]
 mod tests {
-    use near_sdk::test_utils::{get_logs, VMContextBuilder, accounts};
+    use near_sdk::test_utils::{accounts, get_logs, VMContextBuilder};
     use near_sdk::{testing_env, AccountId};
 
     use super::*;
@@ -51,18 +51,16 @@ mod tests {
     fn get_context(predecessor_account_id: AccountId) -> VMContextBuilder {
         let mut builder = VMContextBuilder::new();
         builder
-                .current_account_id(accounts(0))
-                .signer_account_id(predecessor_account_id.clone())
-                .predecessor_account_id(predecessor_account_id);
+            .current_account_id(accounts(0))
+            .signer_account_id(predecessor_account_id.clone())
+            .predecessor_account_id(predecessor_account_id);
         builder
     }
     #[test]
-        fn check_register() {
+    fn check_register() {
         let mut context = get_context(accounts(1));
         testing_env!(context.build());
-        testing_env!(context
-        .predecessor_account_id(accounts(1))
-        .build());
+        testing_env!(context.predecessor_account_id(accounts(1)).build());
         let mut contract_state = App::default();
         contract_state.register_account();
         assert_eq!(accounts(1), contract_state.get_account(accounts(1)));
