@@ -20,14 +20,18 @@ html {
 body {
     background-color: var(--pageBG);
     cursor: default;
-    overflow: hidden;
-
     color: var(--systemPrimary);
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0;
     line-height: 1.23077;
+}
+
+@media (min-width: 720px) {
+    body {
+        overflow: hidden;
+    }
 }
 
 .icon > svg {

@@ -14,7 +14,6 @@
 .Sidebar {
     margin: 16px;
     box-shadow: rgba(0, 0, 0, 0.05) 0 1.25rem 1.6875rem 0;
-    width: 250px;
     background-image: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
     overflow-y: auto;
     height: calc(100vh - 2rem);
