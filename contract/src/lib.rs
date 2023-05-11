@@ -49,4 +49,9 @@ mod tests {
     fn get_account() {
         assert!(true)
     }
+
+    #[test]
+    fn register_account() {
+        assert!(true)
+    }
 }
