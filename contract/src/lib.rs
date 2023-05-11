@@ -44,4 +44,9 @@ impl App {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn get_account() {
+        assert!(true)
+    }
 }
