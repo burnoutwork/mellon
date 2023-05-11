@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Contract" pattern="file[melon]:contract//*" />
+</component>
