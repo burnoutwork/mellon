@@ -64,7 +64,9 @@ mod tests {
         let mut contract = App::default();
         contract.register_account();
 
-        let account = contract.get_account(accounts(1)).expect("Account not found");
+        let account = contract
+            .get_account(accounts(1))
+            .expect("Account not found");
         assert_eq!(account.account_id, accounts(1));
         assert_eq!(account.avatar_cid, None);
     }
@@ -77,9 +79,10 @@ mod tests {
         let mut contract = App::default();
         contract.register_account();
 
-        let account = contract.get_account(accounts(1)).expect("Account not found");
+        let account = contract
+            .get_account(accounts(1))
+            .expect("Account not found");
         assert_eq!(account.account_id, accounts(1));
         assert_eq!(account.avatar_cid, None);
     }
 }
-
