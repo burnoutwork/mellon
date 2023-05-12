@@ -40,10 +40,9 @@ impl App {
         self.accounts.get(&account_id)
     }
 }
-
 #[cfg(test)]
 mod tests {
-    use near_sdk::test_utils::{accounts, get_logs, VMContextBuilder};
+    use near_sdk::test_utils::{accounts, VMContextBuilder};
     use near_sdk::{testing_env, AccountId};
 
     use super::*;
@@ -56,17 +55,31 @@ mod tests {
             .predecessor_account_id(predecessor_account_id);
         builder
     }
+
     #[test]
-    fn check_register() {
+    fn test_register_account() {
         let mut context = get_context(accounts(1));
         testing_env!(context.build());
-        testing_env!(context.predecessor_account_id(accounts(1)).build());
-        let mut contract_state = App::default();
-        contract_state.register_account();
-        assert_eq!(accounts(1), contract_state.get_account(accounts(1)));
+
+        let mut contract = App::default();
+        contract.register_account();
+
+        let account = contract.get_account(accounts(1)).expect("Account not found");
+        assert_eq!(account.account_id, accounts(1));
+        assert_eq!(account.avatar_cid, None);
     }
+
     #[test]
-    fn get_account() {
-        assert!(true);
+    fn test_get_account() {
+        let mut context = get_context(accounts(1));
+        testing_env!(context.build());
+
+        let mut contract = App::default();
+        contract.register_account();
+
+        let account = contract.get_account(accounts(1)).expect("Account not found");
+        assert_eq!(account.account_id, accounts(1));
+        assert_eq!(account.avatar_cid, None);
     }
 }
+
