@@ -1,10 +1,13 @@
-job("run tests") {
-	container(displayName = "test_contract", image = "ubuntu") {
-		shellScript {
-			interpreter = "/bin/bash"
-			content = "apt-get update && apt-get install npm rustc cargo && npm run test"
-		}
-	}
+job("Test contract") {
+    container(displayName = "Run contract tests", image = "rustlang/rust:stable") {
+        shellScript {
+            content = """
+                set -e
+                # Build install dependents
+                npm run init:contract
+                # Run tests
+                npm run test
+            """
+        }
+    }
 }
-
-
