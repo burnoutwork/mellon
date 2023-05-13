@@ -2,7 +2,8 @@ job("run tests") {
 	container(displayName = "test_contract", image = "ubuntu") {
 		shellScript {
 			interpreter = "/bin/bash"
-			content = "npm run test"
+			content = "apt-get update && apt-get install npm rustc cargo" +
+					  "npm run test"
 		}
 	}
 }
