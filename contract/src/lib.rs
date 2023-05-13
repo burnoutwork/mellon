@@ -85,9 +85,4 @@ mod tests {
         assert_eq!(account.account_id, accounts(1));
         assert_eq!(account.avatar_cid, None);
     }
-
-    #[test]
-    fn test_jobs() {
-        assert!(false);
-    }
 }
