@@ -4,6 +4,7 @@
   "description": "Social network",
   "main": "index.js",
   "scripts": {
+    "init": "npm i && cd frontend && npm i && cd ../contract && cargo update",
     "start:frontend": "cd frontend && npm start",
     "deploy": "cd contract && ./deploy.sh",
     "build:contract": "cd contract && cargo build-wasm",
