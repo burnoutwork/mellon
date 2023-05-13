@@ -1,14 +1,51 @@
 .Header {
-    position: sticky;
-    z-index: 40;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: var(--roundedXL);
-    background-color: #fff;
+    width: 100%;
+    --tw-backdrop-blur: blur(24px);
     -webkit-backdrop-filter: blur(24px);
+    padding: .5rem;
+    border-radius: var(--roundedXL);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    position: sticky;
+    margin-top: 0.7rem;
+}
+
+.header--page-info--title {
+    --tw-text-opacity: 1;
+    color: var(--systemPrimary);
+    text-transform: capitalize;
+    font-size: 33px;
+    flex-shrink: 1;
+}
+
+.HeaderSearch {
+    width: 225px;
+    --tw-text-opacity: 1;
+    color: var(--systemPrimary);
+    background-color: var(--bgOnLight);
+    border-radius: var(--roundedFull);
+    align-items: center;
+    height: 100%;
+    display: flex;
+}
+
+.header-search--input {
+    width: fit-content;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    --tw-text-opacity: 1;
+    color: var(--systemPrimary);
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    background-color: var(--bgOnLight);
+    height: 100%;
+    display: block;
+    border: 0 solid #e9ecef;
+    border-radius: var(--roundedFull);
 }
 
 .Sidebar {

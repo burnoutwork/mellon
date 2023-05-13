@@ -1,10 +1,12 @@
 :root {
     --systemRed: #ff3b30;
     --systemPrimary: rgba(0,0,0,.85);
+    --bgOnLight: rgb(244 247 254);
 }
 
 :root {
-    --pageBG: #fff;
+    --pageBG: rgb(240, 242, 245);
     --roundedMD: .5rem;
-    --roundedXL: .75rem
+    --roundedXL: .75rem;
+    --roundedFull: 9999px;
 }
