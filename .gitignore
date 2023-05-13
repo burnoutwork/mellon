@@ -16,4 +16,3 @@ contract/target
 .env.test.local
 .env.production.local
 .testnet
-Dockerfile
