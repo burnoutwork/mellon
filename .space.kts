@@ -4,7 +4,7 @@ job("Test contract") {
                 interpreter = "/bin/sh"
                 content = """
                     echo Install dependencies...
-                    apt -getupdate -y
+                    apt -get update -y
                     apt-get install npm rustc cargo -y
                     npm setup
 
