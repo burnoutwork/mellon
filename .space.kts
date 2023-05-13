@@ -1,5 +1,5 @@
 job("Test contract") {
-    container(displayName = "Run contract tests", image = "rustlang/rust:stable") {
+    container(displayName = "Run contract tests", image = "rustlang/rust:nightly") {
         shellScript {
             content = """
                 set -e
