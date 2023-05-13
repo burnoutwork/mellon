@@ -1,11 +1,16 @@
 job("Test contract") {
-    container(displayName = "Run contract tests", image = "melonweb3/melon:0.1") {
-        shellScript {
-            content = """
-                set -e
-                echo Run tests
-                npm run test
-            """
+     container(displayName = "Run publish script", image = "ubuntu") {
+            shellScript {
+                interpreter = "/bin/sh"
+                content = """
+                    echo Install dependencies...
+                    apt -getupdate -y
+                    apt-get install npm rustc cargo -y
+                    npm setup
+
+                    echo Run tests...
+                    npm run test
+                """
+            }
         }
-    }
 }
