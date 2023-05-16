@@ -33,3 +33,20 @@
     margin: -64px 24px 16px 24px;
     padding: .7rem;
 }
+
+.AccountInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.account-info--avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: var(--roundedFull);
+}
+
+.account-info--name {
+    margin-top: 1rem;
+}

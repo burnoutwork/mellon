@@ -1,6 +1,7 @@
 :root {
     --systemRed: #ff3b30;
     --systemPrimary: rgba(0,0,0,.85);
+    --lightPrimary: rgb(244, 247, 254);
     --bgOnLight: rgb(244 247 254);
 }
 
