@@ -39,3 +39,7 @@ body {
     height: 1.3rem;
 }
 
+.app-content {
+    overflow-y: auto;
+    padding-right: 1.5rem;
+}

@@ -3,7 +3,7 @@ import {VscAccount} from "react-icons/vsc";
 import {TiMessages} from "react-icons/ti";
 import {FiSettings, FiUsers} from "react-icons/fi";
 
-const Account = React.lazy(() => import('./pages/Account'));
+const Account = React.lazy(() => import('./pages/Account'))
 
 const routes = [
     { path: "/", name: "Account", element: Account },
