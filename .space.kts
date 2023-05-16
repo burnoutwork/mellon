@@ -1,9 +1,16 @@
-/**
-* JetBrains Space Automation
-* This Kotlin-script file lets you automate build activities
-* For more info, see https://www.jetbrains.com/help/space/automation.html
-*/
+job("Test contract") {
+     container(displayName = "Run publish script", image = "ubuntu") {
+            shellScript {
+                interpreter = "/bin/sh"
+                content = """
+                    echo Install dependencies...
+                    apt-get update -y
+                    apt-get install npm rustc cargo -y
+                    npm setup
 
-job("Hello World!") {
-    container(displayName = "Hello near", image = "hello-world")
+                    echo Run tests...
+                    npm run test
+                """
+            }
+        }
 }
