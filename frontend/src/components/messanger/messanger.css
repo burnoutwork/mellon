@@ -1,0 +1,31 @@
+.ChatItem {
+    margin-bottom: 1rem;
+    max-height: 6rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: var(--roundedXL);
+    padding: 1rem;
+}
+
+.chat-item--avatar {
+    display: block;
+    vertical-align: middle;
+    height: 4rem;
+    width: 4rem;
+    border-radius: var(--roundedFull);
+}
+
+.chat-item--info {
+    padding-left: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat--item--last-message {
+    margin-top: .5rem;
+
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
