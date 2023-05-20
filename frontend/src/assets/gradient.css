@@ -1,0 +1,27 @@
+.gradient-blue-magenta {
+    background: linear-gradient(to bottom right, #00E8FF 0%, #FF00F7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-green-blue {
+    background: linear-gradient(to bottom right, #00FF00 0%, #007DFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-magenta-yellow {
+    background: linear-gradient(to bottom right, #FF00F7 0%, #FFFD00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-red-blue {
+    background: linear-gradient(to bottom right, #FF2600 0%, #0433FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

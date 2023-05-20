@@ -10,6 +10,12 @@ export const AllChats = () => {
             <ChatItem avatar={avatarImage2} accountId="hellokity.mainnet" lastMessage="Hello!"/>
             <ChatItem avatar={avatarImage3} accountId="worker.mainnet" lastMessage="What is?"/>
             <ChatItem avatar={avatarImage4} accountId="rust.mainnet" lastMessage="This is work"/>
+            <ChatItem avatar={avatarImage2} accountId="hellokity.mainnet" lastMessage="Hello!"/>
+            <ChatItem avatar={avatarImage3} accountId="worker.mainnet" lastMessage="What is?"/>
+            <ChatItem avatar={avatarImage4} accountId="rust.mainnet" lastMessage="This is work"/>
+            <ChatItem avatar={avatarImage2} accountId="hellokity.mainnet" lastMessage="Hello!"/>
+            <ChatItem avatar={avatarImage3} accountId="worker.mainnet" lastMessage="What is?"/>
+            <ChatItem avatar={avatarImage4} accountId="rust.mainnet" lastMessage="This is work"/>
 
         </div>
     )
