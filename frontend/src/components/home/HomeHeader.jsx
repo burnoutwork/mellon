@@ -1,13 +1,10 @@
 import "./home.css";
 import bgImage from "../../assets/image/home-header-bg.webp";
 import {useEffect} from "react";
+import {gsap} from "../../libs/gsap/gsap.min";
 
 export const HomeHeader = () => {
     useEffect(() => {
-        const gsap = window.gsap
-        const ScrollSmoother = window.ScrollSmoother;
-        const ScrollTrigger = window.ScrollTrigger
-
         gsap.fromTo('.scroll-title-hide', { opacity: 1 }, {
             opacity: 0,
             scrollTrigger: {

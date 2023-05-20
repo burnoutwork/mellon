@@ -36,7 +36,6 @@
     position: absolute;
     height: 100vh;
     z-index: 2;
-
 }
 
 .home-header--title {
@@ -47,13 +46,14 @@
 }
 
 .home-header--subtitle {
-    font-size: calc(var(--index));
+    font-size: calc(var(--index) * 1.5);
     position: absolute;
-    bottom: 55vh;
+    bottom: 50vh;
+    width: calc(var(--index) * 20);
 }
 
 .HomeFacts {
-    box-shadow: 0px -20px 12px -3px rgba(34, 60, 80, 0.56);
+    box-shadow: 0 -20px 12px -3px rgba(34, 60, 80, 0.56);
     padding-bottom: 5rem;
     padding-top: calc(var(--index) * 6);
     margin-top: calc(var(--index) * 9);

@@ -5,14 +5,10 @@ import nearImage from "../../assets/image/near.png";
 import HomeFactTextBlock from "./HomeFactTextBlock";
 import HomeFactImage from "./HomeFactImage";
 import {useEffect} from "react";
+import {gsap} from "../../libs/gsap/gsap.min";
 
 export const HomeFacts = () => {
     useEffect(() => {
-        const gsap = window.gsap
-        const ScrollSmoother = window.ScrollSmoother;
-        const ScrollTrigger = window.ScrollTrigger
-
-
         gsap.to('.home-welcome--title',  {
             opacity: 0,
             scrollTrigger: {
