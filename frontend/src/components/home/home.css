@@ -1,0 +1,113 @@
+.Home, .HomeHeader {
+    width: 100%;
+    background-color: var(--pageBG);
+}
+
+.Home {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+.Home::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.HomeHeader {
+    background-color: #000;
+    height: calc(100vh + 15px);
+    box-shadow: 0 21px 10px 2px rgba(34, 60, 80, 0.39);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 2;
+}
+
+.home-header--image {
+    width: 100%;
+    position: absolute;
+    height: calc(100vh + 15px);
+    object-fit: cover;
+    z-index: 1;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.home-header--info {
+    color: var(--systemWhite);
+    position: absolute;
+    height: 100vh;
+    z-index: 2;
+
+}
+
+.home-header--title {
+    font-size: calc(var(--index) * 6);
+    width: min-content;
+    position: absolute;
+    bottom: 60vh;
+}
+
+.home-header--subtitle {
+    font-size: calc(var(--index));
+    position: absolute;
+    bottom: 55vh;
+}
+
+.HomeFacts {
+    box-shadow: 0px -20px 12px -3px rgba(34, 60, 80, 0.56);
+    padding-bottom: 5rem;
+    padding-top: calc(var(--index) * 6);
+    margin-top: calc(var(--index) * 9);
+    background-color: #000;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.home-welcome--title {
+    opacity: 0;
+    font-size: calc(var(--index) * 4);
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.home--fact {
+    display: flex;
+    margin-top: calc(var(--index) * 8);
+}
+
+.home--fact > * {
+    flex: 1;
+}
+
+.home-facts-unwrap {
+    margin-top: calc(var(--index) * 2);
+    padding: calc(var(--index) * 2);
+    display: flex;
+    flex-direction: column;
+}
+
+.HomeFactTextBlock {
+    color: #fff;
+    margin: 0 calc(var(--index) * 2.5);
+}
+
+.home-fact--text-block--title {
+    width: calc(var(--index) * 20);
+    font-size: calc(var(--index) * 2.5);
+}
+
+.home-fact--text-block--body {
+    margin-top: calc(var(--index));
+    font-size: calc(var(--index));
+}
+
+.HomeFactImage > img {
+    height: calc(var(--index) * 11);
+    border-radius: var(--roundedMD);
+
+    display: flex;
+    margin: auto;
+}
