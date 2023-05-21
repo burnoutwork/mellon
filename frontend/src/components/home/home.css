@@ -48,8 +48,19 @@
 .home-header--subtitle {
     font-size: calc(var(--index) * 1.5);
     position: absolute;
-    bottom: 50vh;
+    bottom: 52vh;
     width: calc(var(--index) * 20);
+}
+
+.home-header--scroll-join {
+    color: var(--systemPrimary);
+    font-size: calc(var(--index));
+    background-color: rgb(55, 205, 130);
+    border-radius: var(--roundedXL);
+    position: absolute;
+    bottom: 45vh;
+    width: calc(var(--index) * 10);
+    height: 2rem;
 }
 
 .HomeFacts {
@@ -110,4 +121,27 @@
 
     display: flex;
     margin: auto;
+}
+
+.HomeJoin {
+    width: 100vw;
+    height: 30vh;
+    margin-top: calc(var(--index) * 6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-join--button {
+    box-shadow: 0 -20px 12px -3px rgba(34, 60, 80, 0.56);
+    width: calc(var(--index) * 20);
+    height: calc(var(--index) * 3.5);
+    background-color: rgb(55, 205, 130);
+    border-radius: var(--roundedXL);
+    font-size: calc(var(--index) * 1.2);
+}
+
+.HomeFooter {
+    width: 100vw;
+    height: 200vh;
 }

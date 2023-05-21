@@ -9,6 +9,8 @@ contract/Cargo.lock
 contract/neardev
 contract/target
 
+frontend/.env
+
 # misc
 .DS_Store
 .env.local

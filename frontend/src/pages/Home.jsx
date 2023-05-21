@@ -5,22 +5,15 @@ import {useEffect} from "react";
 import {gsap} from "../libs/gsap/gsap.min";
 import {ScrollSmoother} from "../libs/gsap/ScrollSmoother.min";
 import {ScrollTrigger} from "../libs/gsap/ScrollTrigger.min";
-import Wallet from "../near-wallet";
+import HomeJoin from "../components/home/HomeJoin";
+import HomeFooter from "../components/home/HomeFotter";
 // import {Wallet} from "../near-wallet";
 //
 // const wallet = new Wallet({ createAccessKeyFor: process.env.CONTRACT_NAME })
 
 
 export const Home = () => {
-    const loginWallet = async () => {
-        const isSignedIn = await Wallet.startUp()
-        Wallet.signIn()
-        console.log(isSignedIn)
-
-    }
-
     useEffect( () => {
-        loginWallet().catch(console.error)
     })
 
     useEffect(() => {
@@ -39,6 +32,8 @@ export const Home = () => {
                 <div id="content">
                     <HomeHeader/>
                     <HomeFacts/>
+                    <HomeJoin/>
+                    <HomeFooter/>
                 </div>
             </div>
         </div>
