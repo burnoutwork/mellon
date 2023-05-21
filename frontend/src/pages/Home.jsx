@@ -7,14 +7,23 @@ import {ScrollSmoother} from "../libs/gsap/ScrollSmoother.min";
 import {ScrollTrigger} from "../libs/gsap/ScrollTrigger.min";
 import HomeJoin from "../components/home/HomeJoin";
 import HomeFooter from "../components/home/HomeFotter";
-// import {Wallet} from "../near-wallet";
-//
-// const wallet = new Wallet({ createAccessKeyFor: process.env.CONTRACT_NAME })
+import Wallet from "../near-wallet";
+import {useNavigate} from "react-router-dom";
 
 
 export const Home = () => {
-    useEffect( () => {
-    })
+    const navigate = useNavigate();
+
+    const loginWallet = async () => {
+        let isSignIn = await Wallet.startUp()
+        console.log(isSignIn)
+
+        if (isSignIn) {
+            navigate("/account")
+        } else {
+            Wallet.signIn()
+        }
+    }
 
     useEffect(() => {
         gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
@@ -30,9 +39,9 @@ export const Home = () => {
         <div className="Home">
             <div id="wrapper">
                 <div id="content">
-                    <HomeHeader/>
+                    <HomeHeader loginWallet={loginWallet}/>
                     <HomeFacts/>
-                    <HomeJoin/>
+                    <HomeJoin loginWallet={loginWallet}/>
                     <HomeFooter/>
                 </div>
             </div>

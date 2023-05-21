@@ -23,6 +23,8 @@ import { setupNearWallet } from '@near-wallet-selector/near-wallet';
 const THIRTY_TGAS = '30000000000000';
 const NO_DEPOSIT = '0';
 
+const REDIRECT_TO = document.location.origin + '/#/account';
+
 
 // Wallet that simplifies using the wallet selector
 export class WalletApi {
@@ -45,8 +47,8 @@ export class WalletApi {
         this.walletSelector = await setupWalletSelector({
             network: this.network,
             modules: [
-                setupNearWallet({ iconUrl: nearIconUrl }),
-                setupMyNearWallet({ iconUrl: MyNearIconUrl }),
+                setupNearWallet({ iconUrl: nearIconUrl, successUrl: REDIRECT_TO }),
+                setupMyNearWallet({ iconUrl: MyNearIconUrl, successUrl: REDIRECT_TO }),
                 setupLedger({ iconUrl: LedgerIconUrl }),
             ],
         });

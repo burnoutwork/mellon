@@ -1,13 +1,8 @@
 import {useEffect} from "react";
 import {gsap} from "../../libs/gsap/gsap.min";
-import Wallet from "../../near-wallet";
+import PropTypes from "prop-types";
 
-export const HomeJoin = () => {
-    const loginWallet = async () => {
-        await Wallet.startUp()
-        Wallet.signIn()
-    }
-
+export const HomeJoin = ({ loginWallet }) => {
     useEffect(() => {
         gsap.to('.home-join--button',  {
             width: '100%',
@@ -23,8 +18,8 @@ export const HomeJoin = () => {
             height: '4rem',
             scrollTrigger: {
                 trigger: '.home-join--button',
-                start: 1900,
-                end: 2100,
+                start: 'center 80%',
+                end: 'center 50%',
                 scrub: true
             }
         })
@@ -40,3 +35,7 @@ export const HomeJoin = () => {
 }
 
 export default HomeJoin
+
+HomeJoin.propsType = {
+    loginWallet: PropTypes.func
+}

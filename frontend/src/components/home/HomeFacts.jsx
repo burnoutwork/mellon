@@ -21,7 +21,7 @@ export const HomeFacts = () => {
             scrollTrigger: {
                 trigger: '.home-welcome--title',
                 start: 350,
-                end: 700,
+                end: 800,
                 scrub: true
             }
         })

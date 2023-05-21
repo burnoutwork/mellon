@@ -65,8 +65,7 @@
 
 .HomeFacts {
     box-shadow: 0 -20px 12px -3px rgba(34, 60, 80, 0.56);
-    padding-bottom: 5rem;
-    padding-top: calc(var(--index) * 6);
+    padding: calc(var(--index) * 6) 1rem 5rem 1rem;
     margin-top: calc(var(--index) * 9);
     background-color: #000;
     border-top-left-radius: 15px;
@@ -77,6 +76,7 @@
 }
 
 .home-welcome--title {
+    text-align: center;
     opacity: 0;
     font-size: calc(var(--index) * 4);
     display: flex;

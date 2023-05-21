@@ -2,9 +2,9 @@ import "./home.css";
 import bgImage from "../../assets/image/home-header-bg.webp";
 import {useEffect} from "react";
 import {gsap} from "../../libs/gsap/gsap.min";
-import Wallet from "../../near-wallet";
+import PropTypes from "prop-types";
 
-export const HomeHeader = () => {
+export const HomeHeader = ({ loginWallet }) => {
     useEffect(() => {
         gsap.fromTo('.scroll-title-hide', { opacity: 1 }, {
             opacity: 0,
@@ -16,10 +16,6 @@ export const HomeHeader = () => {
             }
         })
     })
-    const loginWallet = async () => {
-        await Wallet.startUp()
-        Wallet.signIn()
-    }
 
     return (
         <div className="HomeHeader" data-speed="0.9">
@@ -34,3 +30,7 @@ export const HomeHeader = () => {
 }
 
 export default HomeHeader;
+
+HomeHeader.propsType = {
+    loginWallet: PropTypes.func
+}
