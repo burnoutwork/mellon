@@ -13,9 +13,8 @@ export const Account = () => {
     let [account, setAccount] = useState();
 
     useEffect( () => {
-        melon.getSelfAccount().then(setAccount)
         if (accountId) {
-            melon.getAccount(accountId).then(setAccount)
+            melon.getAccount(accountId).then(setAccount).catch(console.log)
         } else {
             melon.getSelfAccount().then(setAccount)
         }

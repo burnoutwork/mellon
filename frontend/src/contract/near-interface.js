@@ -17,11 +17,14 @@ export class Melon {
             }
         });
 
-        return account ?
-            new Account({
+        if (!account) {
+            throw 'account not found'
+        }
+
+        return new Account({
                 accountId: account.account_id,
                 avatarCID: account.avatar_cid
-            }) : undefined
+            })
     }
 
     async getSelfAccount() {
