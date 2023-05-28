@@ -62,7 +62,7 @@
 }
 
 .header-search--input {
-    width: fit-content;
+    width: 100%;
     outline: 0;
     outline-offset: 0;
     border: 0;
@@ -77,13 +77,15 @@
 }
 
 .Sidebar {
-    width: 25vw;
+    width: 22vw;
     margin: 16px;
     box-shadow: rgba(0, 0, 0, 0.05) 0 1.25rem 1.6875rem 0;
     background-image: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
     height: calc(100vh - 2rem);
     border-radius: var(--roundedXL);
 }
+
+
 
 .sidebar--title {
     padding: 24px 32px 8px 32px;
@@ -101,8 +103,8 @@
 }
 
 .sidebar--items-bottom {
-    position: fixed;
-    width: 25vw;
+    position: absolute;
+    width: 22vw;
     left: 1rem;
     bottom: 1rem;
     padding: 0 1.5rem 1rem 1rem;
@@ -133,4 +135,27 @@
     margin-left: 0.7rem;
     font-weight: 300;
     font-size: 0.875rem;
+}
+
+@media (max-width: 720px) {
+    .Sidebar {
+        width: 94vw;
+    }
+
+    .Header {
+        position: relative;
+        width: 100%;
+    }
+
+    .header--page-info {
+        display: none;
+    }
+
+    .HeaderSearch {
+        width: 100%;
+    }
+
+    .header--search-wrap {
+        width: 80%;
+    }
 }

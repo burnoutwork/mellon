@@ -12,4 +12,6 @@
     --roundedMD: .5rem;
     --roundedXL: .75rem;
     --roundedFull: 9999px;
+
+    --mobile-size: 720px;
 }
