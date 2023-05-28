@@ -42,10 +42,6 @@ body {
     height: 1.3rem;
 }
 
-.app-content {
-    padding-right: 1.5rem;
-    overflow-y: auto;
-}
 
 .container {
     padding: 0 7vw;

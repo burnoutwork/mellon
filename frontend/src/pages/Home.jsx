@@ -7,7 +7,7 @@ import {ScrollSmoother} from "../libs/gsap/ScrollSmoother.min";
 import {ScrollTrigger} from "../libs/gsap/ScrollTrigger.min";
 import HomeJoin from "../components/home/HomeJoin";
 import HomeFooter from "../components/home/HomeFotter";
-import Wallet from "../near-wallet";
+import Wallet from "../contract/near-wallet";
 import {useNavigate} from "react-router-dom";
 
 

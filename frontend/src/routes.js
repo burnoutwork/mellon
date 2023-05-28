@@ -14,6 +14,7 @@ const routes = [
     { path: "/", name: "Home", element: Home },
     { path: "/home", name: "Home", element: Home },
     { path: "/account", name: "Account", element: Account, navIcon: VscAccount },
+    { path: "/account/:accountId", name: "AccountWithId", element: Account },
     { path: "/messenger", name: "Messenger", element: Messenger, navIcon: TiMessages },
     { path: "/subscriptions", name: "Subscriptions", navIcon: FiUsers },
     { path: "/settings", name: "Settings", navIcon: FiSettings }

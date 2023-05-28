@@ -1,0 +1,15 @@
+.DefaultLayout {
+    display: flex;
+    flex-direction: row;
+}
+
+.app-view {
+    padding-right: 1.5rem;
+    overflow-y: scroll;
+    width: 75vw;
+    height: calc(100vh - 0.5rem);
+}
+
+.app-content {
+    margin-top: calc(var(--index) * 4 + 2rem);
+}

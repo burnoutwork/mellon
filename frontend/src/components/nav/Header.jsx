@@ -10,7 +10,9 @@ export const Header = () => {
     const location = useLocation();
 
     const findCurrentRoute = () => {
-        return routes.find(route => route.path === location.pathname).name
+        let route = routes.find(route => route.path === location.pathname);
+
+        return route ? route.name : "Melon"
     }
 
 

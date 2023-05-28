@@ -35,3 +35,16 @@ button, input[type="submit"], input[type="reset"] {
     cursor: pointer;
     outline: inherit;
 }
+
+h4 {
+    font-size: calc(var(--index) * 1.4);
+
+}
+
+h5 {
+    font-size: calc(var(--index) * 1.2);
+}
+
+h6 {
+    font-size: calc(var(--index));
+}

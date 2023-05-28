@@ -4,7 +4,7 @@ import './assets/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import "./near-wallet";
+import "./contract/near-wallet";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

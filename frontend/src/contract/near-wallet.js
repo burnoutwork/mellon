@@ -89,6 +89,7 @@ export class WalletApi {
             args_base64: Buffer.from(JSON.stringify(args)).toString('base64'),
             finality: 'optimistic',
         });
+
         return JSON.parse(Buffer.from(res.result).toString());
     }
 
@@ -123,8 +124,23 @@ export class WalletApi {
         const transaction = await provider.txStatus(txhash, 'unnused');
         return providers.getTransactionLastResult(transaction);
     }
+
+    getAccountId() {
+        let accounts = this.walletSelector.store.getState().accounts;
+
+        if (accounts.length === 0) {
+            window.location.href = '/'
+        }
+
+        return accounts[0].accountId
+    }
+
+    getContractId() {
+        return this.createAccessKeyFor
+    }
 }
 
 export const Wallet = new WalletApi({ createAccessKeyFor: process.env.CONTRACT_NAME })
+Wallet.startUp().catch(console.error);
 
 export default Wallet;

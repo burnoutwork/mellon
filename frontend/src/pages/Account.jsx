@@ -3,14 +3,29 @@ import bdImage from "../assets/image/account-bd.jpeg";
 import "../components/account/account.css";
 import {AccountInfo} from "../components/account/AccountInfo";
 import avatarImage from "../assets/image/avatars/1.avif";
+import {useParams} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {melon} from "../contract/near-interface";
 
 
 export const Account = () => {
+    let { accountId } = useParams();
+    let [account, setAccount] = useState();
+
+    useEffect( () => {
+        melon.getSelfAccount().then(setAccount)
+        if (accountId) {
+            melon.getAccount(accountId).then(setAccount)
+        } else {
+            melon.getSelfAccount().then(setAccount)
+        }
+    }, [])
+
     return (
         <div className="Account">
             <AccountBg image={bdImage}/>
             <div className="account--main">
-                <AccountInfo name="admin.mainnet" avatar={avatarImage}/>
+                <AccountInfo name={account ? account.accountId : "..."} avatar={avatarImage}/>
             </div>
         </div>
     )
